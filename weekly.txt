@@ -1,59 +1,67 @@
-1.��provider ��ɾ�Ĳ���֮ǰ������ʽ���÷��񷽷����ʹ�ã��������Լ��Ĳ��Կͻ��ˣ�
+1.将provider 增删改查与之前代理方式调用服务方法结合使用，并开发自己的测试客户端；
 
-2.ʹ��cppcheck�������ύ���뵽Gerrit,ѧϰ�ύ���������̣�
+2.使用cppcheck修正，提交代码到Gerrit,学习提交和修正流程；
 
-3.ѧϰ����  framework/service/CloudService/
-
-
-1.ѧϰ���� framework/service/CloudServiceģ�飬����AccountManager,AppUpdateManager,SyncAppInfoManager,PreDownloadManager,SystemUpdateManager
-
-2. ��framework/service/CloudServiceģ�������ͼ��ʱ��ͼ������ͼ
+3.学习代码  framework/service/CloudService/
 
 
+1.学习代码 framework/service/CloudService模块，包括AccountManager,AppUpdateManager,SyncAppInfoManager,PreDownloadManager,SystemUpdateManager
 
-����ѧϰframework/service/CloudServiceģ�飬׼�����ڷ���
-
-
-1. ������� framework/service/CloudServiceģ�飨AccountManager,AppUpdateManager,SyncAppInfoManager,PreDownloadManager,SystemUpdateManager������ͼ,ʱ��ͼ������ͼ
-
-2. ��������framework/service/CloudServiceģ���е�WeatherManager����,���������ͼ��ʱ��ͼ��׼�����ڷ���
-
-
-1. ���ڴ��������
-
-2. framework/service/CloudServiceģ���� timesync �������⣬framework/model/cloud ģ��������⣬�������ͼ��ʱ��ͼ��
-
-3. ѧϰModel/View �ṹ, Model�����UI���н����� �ص�ѧϰ��Model��NGAbstractItemModel�����Ҫ������index()��rowCount()��data(����flags()��setdata()�ȣ����������ͨ�������Զ���ģ�ͻ��Model���ݡ���ʾ���⡢��������Ϊ�ɱ���״̬�����ý�ɫ�ȡ�
-
-
-1.ѧϰiAuto3 service ���룬������service��ܣ��ܽ���service�������̺���Ҫע���һЩ���ʵ���˹㲥���ܡ�
-
-2.����ѧϰiAuto3 service notifycenter���ִ��룬�˽������Ŀʵ������������ν��п����� 
+2. 画framework/service/CloudService模块相关类图，时序图，流程图
 
 
 
-
-1������ṹ�����������ļ��й�����DownloadManagerģ�飻
-
-2�����ӷ������provider����ɾ�Ĳ鹦�ܣ�
-
-3�����ӵ���provider�Ŀͻ��˳���
+继续学习framework/service/CloudService模块，准备组内分享
 
 
+1. 继续完成 framework/service/CloudService模块（AccountManager,AppUpdateManager,SyncAppInfoManager,PreDownloadManager,SystemUpdateManager）的类图,时序图，流程图
 
-ʹ��cppcheck�������룬���ݰ��������һ������
-
-
-1.��֮ǰ����ѧϰ�Ļ����ϣ�����ѧϰframork/model/cloud ��framework/service/CloudService Weather ��timesync���ֵ�ÿһ����룬��ӡlog���٣��������Լ����뷨����������
-
-2.���֮ǰ����е�֪ʶä���ϴ�����������������ѧϰ������HTTPЭ�����֪ʶѧϰ��curl�ӿ�ʹ�á�json������postRepuest��ʽ�����̡߳��������ʹ��socket��ѧϰ��
+2. 代码理解framework/service/CloudService模块中的WeatherManager部分,并画相关类图，时序图，准备组内分享
 
 
+1. 组内代码分享；
 
-CloudServiceʣ�๦��ģ�������ѧϰ�����֪ʶä��Ľ�һ��ѧϰ
+2. framework/service/CloudService模块中 timesync 代码理解，framework/model/cloud 模块代码理解，画相关类图，时序图；
+
+3. 学习Model/View 结构, Model如何与UI进行交互。 重点学习了Model中NGAbstractItemModel类的重要方法（index()、rowCount()、data(）、flags()、setdata()等），包括如何通过派生自定义模型获得Model数据、显示标题、设置数据为可编译状态、设置角色等。
 
 
-1.��֮ǰ����ѧϰ�Ļ����ϣ�����ѧϰframework/service/CloudService accoutManager ��predownloadManagerģ���ÿһ����룬��ӡlog���٣�
+1.学习iAuto3 service 代码，掌握了service框架，总结了service开发流程和需要注意的一些事项，实现了广播功能。
+
+2.深入学习iAuto3 service notifycenter部分代码，了解具体项目实践过程中是如何进行开发的 
 
 
-2.���֮ǰ����е�֪ʶä���ϴ�����������������ѧϰ�������˻����ƶ�ʱˢ�¡�MD5�㷨������������˻���¼ע��������app��װ�����¼������ȡ�
+
+
+1、代码结构整理，划分文件夹功能如DownloadManager模块；
+
+2、添加服务程序provider的增删改查功能，
+
+3、添加调用provider的客户端程序
+
+
+
+使用cppcheck修正代码，根据安排完成下一步工作
+
+
+1.在之前整体学习的基础上，深入学习framork/model/cloud 与framework/service/CloudService Weather 和timesync部分的每一句代码，打印log跟踪，并根据自己的想法尝试修正。
+
+2.针对之前框架中的知识盲点结合代码与网上资料深入学习，包括HTTP协议相关知识学习、curl接口使用、json解析、postRepuest方式启动线程、、框架中使用socket的学习等
+
+
+
+CloudService剩余功能模块的深入学习，相关知识盲点的进一步学习
+
+
+1.在之前整体学习的基础上，深入学习framework/service/CloudService accoutManager 、predownloadManager模块的每一句代码，打印log跟踪；
+
+
+2.针对之前框架中的知识盲点结合代码与网上资料深入学习，包括账户令牌定时刷新、MD5算法、网络监听，账户登录注销监听，app安装升级事件监听等。
+
+
+在CloudService 的网络时间同步的时候，会先判断网络同步时间的开关是否打开了。
+
+    目前该判断是注释掉的状态，你测试一下这个开关是否有效，把判断代码恢复一下
+    1. 恢复CloudService网络时间同步开关代码与提交
+    2. 在之前整体学习的基础上，深入学习framework/service/CloudService appupdate、syncappinfo模块的每一句代码，打印log跟踪；
+    3. 熟悉igerrit代码提交环境，学习相关git命令
