@@ -2,3 +2,38 @@
 
 通常，我们需要在某个事件发生时执行代码，比如当用户点击按钮时。
 如果我们把 JavaScript 代码放入函数中，就可以在事件发生时调用该函数。
+
+
+<script>
+function myFunction()
+{
+document.write("糟糕！文档消失了。");
+}
+</script>
+不能写在函数中
+
+
+当您向变量分配文本值时，应该用双引号或单引号包围这个值。
+当您向变量赋的值是数值时，不要使用引号。如果您用引号包围数值，该值会被作为文本来处理。
+
+
+在执行过以下语句后，变量 carname 的值将是 undefined：
+var carname;
+
+如果重新声明 JavaScript 变量，该变量的值不会丢失：
+在以下两条语句执行后，变量 carname 的值依然是 "Volvo"：
+var carname="Volvo";
+var carname;
+
+JavaScript 拥有动态类型。这意味着相同的变量可用作不同的类型：
+实例
+var x                // x 为 undefined
+var x = 6;           // x 为数字
+var x = "Bill";
+
+数组
+
+var cars=new Array();
+cars[0]="Audi";
+cars[1]="BMW";
+cars[2]="Volvo";
