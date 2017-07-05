@@ -74,3 +74,5 @@ document.write(cars[4] + "<br>");
 document.write(cars[5] + "<br>");
 }
 
+
+RegExp 对象用于规定在文本中检索的内容
